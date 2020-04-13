@@ -2,20 +2,29 @@
 <html>
     <head>
       <title>My Webpage</title>
-      <link rel="stylesheet" href="styles.css" />
+      <link rel="stylesheet" href="styles.css" >
+      <link rel="stylesheet" href="variables.css" >
       <style media="screen">
         h2{
           color:red;
           text-align:center;
         }
+        input[type=text]{
+          background-color: red;
+        }
+        input[type=number]{
+          background-color: green;
+        }
       </style>
     </head>
     <body>
+      <a href="#section1">Go to Section 1</a>
         <h1 style="color:#225522;text-align:center">Hello world!!</h1>
         <h2>Hello from github Web interface!!</h2>
         <h3>Hello third !!!</h3>
         <h4>Hello from feature beanch</h4>
-        <h4>Added for creating Pull Request</h4>
+        <h4 id = "section1">Added for creating Pull Request</h4>
+        <h5>Background color being rendred from scss</h5>
         <ul>
             <li>1</li>
             <li>2</li>
@@ -24,8 +33,18 @@
             <li>One</li>
             <li>Two</li>
         </ol>
+        <br>
         <form>
             <input type="text" placeholder="Full Name" name="name">
+            <input type="number" placeholder="Number" name="name">
+            <input type="password" name="password" placeholder="Password">
+            <br>
+            <input name="country" list="countries" placeholder="Country">
+            <datalist id="countries">
+              <option value="India">
+              <option value="China">
+            </datalist>
+
             <button>Submit</button>
         </form>
     </body>
