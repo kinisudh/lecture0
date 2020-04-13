@@ -19,7 +19,7 @@
     </head>
     <body>
       <a href="#section1">Go to Section 1</a>
-        <h1 style="color:#225522;text-align:center">Hello world!!</h1>
+        <h1 style="color:#225522;text-align:center">{{headline}}</h1>
         <h2>Hello from github Web interface!!</h2>
         <h3>Hello third !!!</h3>
         <h4>Hello from feature beanch</h4>
@@ -34,9 +34,8 @@
             <li>Two</li>
         </ol>
         <br>
-        <form>
-            <input type="text" placeholder="Full Name" name="name">
-            <input type="number" placeholder="Number" name="name">
+        <form action="{{ url_for("hello") }}" method="post">
+            <input type="text" placeholder="Full Name" name="name">            
             <input type="password" name="password" placeholder="Password">
             <br>
             <input name="country" list="countries" placeholder="Country">
